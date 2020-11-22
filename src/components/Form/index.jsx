@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import './style.scss';
 
 import UserProfile from '../UserProfile/index';
+import UserRepositories from '../UserRepositories/index';
 
 import { GoSearch } from 'react-icons/go';
 
@@ -30,28 +32,29 @@ const Form = () => {
   }
 
   return (
-    <div>
-      <form>
-        <input
-          type="text"
-          placeholder="Procurar"
-          value={username}
-          onChange={onChangeHandler}
-        />
+    <>
+      <div className="form-container">
+        <form>
+          <input
+            type="text"
+            placeholder="Procurar"
+            value={username}
+            onChange={onChangeHandler}
+          />
+          <button
+            type="submit"
+            onClick={handlerSubmit}
+          >
+            <GoSearch fontSize="20" />
+          </button>
+        </form>
+      </div>
 
-        <button
-          type="submit"
-          onClick={handlerSubmit}
-        >
-          <GoSearch fontSize="20" />
-        </button>
-      </form>
-
-
-      <UserProfile data={data} repositories={repositories} />
-
-
-    </div>
+      <div className="user-container">
+        <UserProfile data={data} />
+        <UserRepositories repositories={repositories} />
+      </div>
+    </>
   );
 }
 
