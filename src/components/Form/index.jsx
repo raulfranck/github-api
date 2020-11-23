@@ -37,7 +37,7 @@ const Form = () => {
         <form>
           <input
             type="text"
-            placeholder="Procurar"
+            placeholder="Name"
             value={username}
             onChange={onChangeHandler}
           />

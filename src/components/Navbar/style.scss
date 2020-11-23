@@ -4,7 +4,6 @@
   
   background-color: $main-color;
   width: 100%;
-
   padding: 10px 0;
 
   div {
@@ -28,10 +27,6 @@
       color: #fff;
       font-weight: 100;
       text-align: center;
-
-      @media (max-width: 550px) {
-        padding: 0;
-      }
     }
   }
 }
